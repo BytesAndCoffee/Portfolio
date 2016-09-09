@@ -1,4 +1,4 @@
-from pipe import FrozenFunction
+from fmap import FrozenFunction
 from copy import copy
 
 
