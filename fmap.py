@@ -29,7 +29,7 @@ class FrozenFunction:
             raise AttributeError('Attribute not found')
 
 
-class Pipeline:
+class FuncMap:
     def __init__(self, funcs=None, val=None):
         self._val = val
         self._funcs = funcs if funcs else list()
@@ -37,7 +37,6 @@ class Pipeline:
 
     def __call__(self, func, args=None):
         self._funcs.append(FrozenFunction(func))
-        # if args: self._args.update({func)
         return func
 
     @property
